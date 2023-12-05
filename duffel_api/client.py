@@ -3,6 +3,7 @@ from .api import (
     AircraftClient,
     AirportClient,
     AirlineClient,
+    CityClient,
     OfferRequestClient,
     OfferClient,
     OrderCancellationClient,
@@ -68,6 +69,11 @@ class Duffel:
     def airlines(self):
         """Airlines API - /air/airlines"""
         return AirlineClient(**self._kwargs)
+
+    @lazy_property
+    def cities(self):
+        """Cities API - /air/cities"""
+        return CityClient(**self._kwargs)
 
     @lazy_property
     def offer_requests(self):

@@ -17,11 +17,13 @@ from .notifications.webhooks import WebhookClient
 from .supporting.aircraft import AircraftClient
 from .supporting.airports import AirportClient
 from .supporting.airlines import AirlineClient
+from .supporting.cities import CityClient
 
 __all__ = [
     "AircraftClient",
     "AirportClient",
     "AirlineClient",
+    "CityClient",
     "LinksSessionClient",
     "LinksSessionCreate",
     "OfferRequestClient",

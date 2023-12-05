@@ -14,6 +14,7 @@ from .api import (
     PartialOfferRequestClient,
     PaymentClient,
     PaymentIntentClient,
+    PlaceClient,
     LinksSessionClient,
     SeatMapClient,
     WebhookClient,
@@ -124,6 +125,11 @@ class Duffel:
     def payments(self):
         """Payments API - /air/payments"""
         return PaymentClient(**self._kwargs)
+
+    @lazy_property
+    def places(self):
+        """Places API - /air/places"""
+        return PlaceClient(**self._kwargs)
 
     @lazy_property
     def seat_maps(self):

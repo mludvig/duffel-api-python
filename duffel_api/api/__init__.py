@@ -18,6 +18,7 @@ from .supporting.aircraft import AircraftClient
 from .supporting.airports import AirportClient
 from .supporting.airlines import AirlineClient
 from .supporting.cities import CityClient
+from .supporting.places import PlaceClient
 
 __all__ = [
     "AircraftClient",
@@ -41,6 +42,7 @@ __all__ = [
     "PaymentClient",
     "PaymentIntentClient",
     "PaymentIntentCreate",
+    "PlaceClient",
     "SeatMapClient",
     "WebhookClient",
 ]

@@ -15,6 +15,6 @@ class AirportClient(HttpClient):
         if res is not None:
             return Airport.from_json(res["data"])
 
-    def list(self, limit=50):
+    def list(self, limit=50, iata_country_code=None):
         """GET /air/airports"""
-        return Pagination(self, Airport, {"limit": limit})
+        return Pagination(self, Airport, {"limit": limit, "iata_country_code": iata_country_code})

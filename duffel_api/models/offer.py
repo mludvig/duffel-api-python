@@ -234,7 +234,6 @@ class OfferSliceSegmentStop:
     @classmethod
     def from_json(cls, json: dict):
         """Construct a class instance from a JSON response."""
-        print(json)
         return cls(
             id=json["id"],
             airport=Airport.from_json(json["airport"]),
